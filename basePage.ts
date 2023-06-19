@@ -5,7 +5,8 @@ interface Options {
     driver?: WebDriver;
     /* if no driver is supplied, we make one or use the constructor to make one */
     url?: string; 
-    /* oh my gosh samezies*/
+    /* if no url is supplied, we make one or use the constructor to make one */
+
 }
 
 export class BasePage {
