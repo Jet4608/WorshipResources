@@ -1,7 +1,6 @@
 import { Builder, By, Capabilities, until, WebDriver,
      WebElement, Key } from "selenium-webdriver";
 import { BasePage } from './basePage'
-const chromedriver = require("chromedriver");
 const driver: WebDriver = new Builder()
     .withCapabilities(Capabilities.chrome())
     .build();
@@ -31,15 +30,17 @@ export default class WorRes extends BasePage {
     schCallMainArea7: By = By.xpath('(//a[@href="/free30"])[7]');
 
 //Resources main page:
-wrResourcesTab: By = By.xpath('(//li[@class="et_pb_menu_page_id-5 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-55080"])[1]');
-/* The Media, Music and Tech are not needed once you're on the Resources page
+wrResourcesTab: By = By.xpath('(//li[@id="menu-item-55080"])[1]')
+//('(//li[@class="et_pb_menu_page_id-5 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-55080"])[1]');
+media: By = By.xpath('(//li[@id="menu-item-55100"])[1]');
+// The Media, Music and Tech may not be necessary once you're on the Resources page but may help scroll.
 //1st menu: Media
-media: By = By.xpath('(//a[@class="et_pb_button et_pb_button_0 et_hover_enabled et_pb_bg_layout_light"])');
+// did not work -> media: By = By.xpath('(//a[@class="et_pb_button et_pb_button_0 et_hover_enabled et_pb_bg_layout_light"])');
 //2nd menu: Music
 music: By = By.xpath('(//li[@id="menu-item-55099"])[1]');
 //3rd menu: Tech
 tech: By = By.xpath('(//li[@id="menu-item-55101"])[1]');
-*/
+
 /*Media Sub menu: 
 Church Media Libraries
 Church Motion Backgrounds
@@ -48,7 +49,20 @@ Church Stock Photos
 Church Stock Videos
 Church Fonts
 Sermon Series Graphics */
-churchMediaLib: By = By.xpath('(//a[@class="et_pb_button"])[1]');
+churchMediaLibFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_0 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+churchMediaLib: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/church-media-libraries/"])[3]');
+churchMotionBkgrndsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_2 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+//churchMotionBkgrnds:
+churchVidsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_4 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+//churchVids
+churchStockPhtsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_6 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+//churchstockPhts
+churchStockVidsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_8 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+//churchStockVids
+churchFontsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_10 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+//churchFonts
+sermonSeriesGrphcsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_12 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+//sermonSeriesGrphcs
 
 /*Music Resources Sub menu:
 Church Copyright Resources
