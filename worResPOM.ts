@@ -52,29 +52,54 @@ Sermon Series Graphics */
 churchMediaLibFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_0 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
 churchMediaLib: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/church-media-libraries/"])[3]');
 churchMotionBkgrndsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_2 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
-//churchMotionBkgrnds:
+//
+churchMotionBkgrnds: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/church-motion-backgrounds/"])[3]');
 churchVidsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_4 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
-//churchVids
+churchVids: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/church-videos/"])[3]');
 churchStockPhtsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_6 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
-//churchstockPhts
+churchStockPhts: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/church-stock-photos/"])[3]');
 churchStockVidsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_8 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
-//churchStockVids
+churchStockVids: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/church-stock-videos/"])[3]');
 churchFontsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_10 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
-//churchFonts
+churchFonts: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/church-fonts/"])[3]');
 sermonSeriesGrphcsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_12 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
-//sermonSeriesGrphcs
+sermonSeriesGrphcs: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/sermon-series-graphics/"])[3]');
 
-/*Music Resources Sub menu:
-Church Copyright Resources
-Church Muisc Charts & Publishers
-Multitracks & Click Tracks
-Stock Music Publishers */
+//Music Resources Sub menu:
+//Church Copyright Resources
+chrchCpyrghtResFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_14 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+chrchCpyrghtRes: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/church-copyright-resources/"])[3]');
+
+//Church Muisc Charts & Publishers
+chrchMscChrtsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_16 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+churchMscChrts: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/church-music-charts/"])[3]');
+//this is the bug from the Resources page under Music (not from the header)
+
+//Multitracks & Click Tracks
+multitrcksClckTrcksFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_18 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+multitrcksClckTrcks: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-sound-training/"])[3]');
+
+//Stock Music Publishers
+stckMscPblshrsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_20 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+stckMscPblshrs: By = By.xpath('(//a[@href="https://www.worshipresources.church/church-resources/sermon-series-graphics/"])[4]');
+
 
 /*Tech Resources Sub menu:
 Church Management Software
+chrchMngmntSftwrFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_22 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+chrchMngmntSftwr
+
 Church Website Builders
+chrchWbstBldrsFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_24 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+chrchWbstBldrs
+
 Church Sound Training
+chrchSndTrnngFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_26 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+ChrchSndTrnng
+
 Worship Leader Training
+wrshpLdrTrnFlip: By = By.xpath('(//div[@class="et_pb_module dsm_flipbox_child dsm_flipbox_child_28 et_pb_bg_layout_dark dsm_flipbox_icon_position_top"])');
+wrshpLdrTrn
  */
 
     //Resources > Media > Church Media Libraries
@@ -159,3 +184,4 @@ const visualMediaChurch: By = By.xpath('(//h4[@class="et_pb_module_header"])[20]
             await this.driver.sleep(1000);
         }
     }
+
