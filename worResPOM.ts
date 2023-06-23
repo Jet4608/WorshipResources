@@ -4,20 +4,6 @@ import { BasePage } from './basePage'
 const driver: WebDriver = new Builder()
     .withCapabilities(Capabilities.chrome())
     .build();
-//selectors aka what we are manipulating
-
-
-
-
-// export const schCallMainArea: By[] = [
-//    By.xpath('(//a[@href="/free30"])[1]'),
-//    By.xpath('(//a[@href="/free30"])[2]'),
-//    By.xpath('(//a[@href="/free30"])[3]'),
-//    By.xpath('(//a[@href="/free30"])[4]'), 
-//    By.xpath('(//a[@href="/free30"])[5]'),
-//    By.xpath('(//a[@href="/free30"])[6]'),
-//    By.xpath('(//a[@href="/free30"])[7]'),
-//];
 
 export default class WorRes extends BasePage {
     schCallHead: By = By.xpath('(//a[@class="et_pb_button et_pb_button_0_tb_header et_hover_enabled et_pb_bg_layout_light"])');
@@ -30,12 +16,11 @@ export default class WorRes extends BasePage {
     schCallMainArea7: By = By.xpath('(//a[@href="/free30"])[7]');
 
 //Resources main page:
-wrResourcesTab: By = By.xpath('(//li[@id="menu-item-55080"])[1]')
-//('(//li[@class="et_pb_menu_page_id-5 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-55080"])[1]');
-media: By = By.xpath('(//li[@id="menu-item-55100"])[1]');
-// The Media, Music and Tech may not be necessary once you're on the Resources page but may help scroll.
+// The Media, Music and Tech may not be necessary once you're on the 
+//Resources page but may help scroll.
+wrResourcesTab: By = By.xpath('(//li[@id="menu-item-55080"])[1]');
 //1st menu: Media
-// did not work -> media: By = By.xpath('(//a[@class="et_pb_button et_pb_button_0 et_hover_enabled et_pb_bg_layout_light"])');
+media: By = By.xpath('(//li[@id="menu-item-55100"])[1]');
 //2nd menu: Music
 music: By = By.xpath('(//li[@id="menu-item-55099"])[1]');
 //3rd menu: Tech
@@ -153,21 +138,11 @@ const shareFaith: By = By.xpath('(//h4[@class="et_pb_module_header"])[18]');
 const shiftWorship: By = By.xpath('(//h4[@class="et_pb_module_header"])[19]');
 const visualMediaChurch: By = By.xpath('(//h4[@class="et_pb_module_header"])[20]');
   //  rsrcsTab: By = By.xpath
-
 */
 
-
-
-    /* Note from Mars: When I do the pricing it will need to be structured like 
-    let i = the thing I'm setting the array to as my selector*/
-   
-    
-    //constructor
     constructor () {
         super ({url:"https://www.worshipresources.church/"});
-    }
-
-    //methods
+    };
     
     async wrshpRsrcsTabs() {
         const handles = await this.driver.getAllWindowHandles();
@@ -178,10 +153,8 @@ const visualMediaChurch: By = By.xpath('(//h4[@class="et_pb_module_header"])[20]
             await this.driver.close();
             await this.driver.switchTo().window(originalHandle);
             await this.driver.sleep(1500);
-    }}
+    }};
         async scrollDown() {
             await this.driver.executeScript("window.scrollTo(0, document.body.scrollHeight)");
             await this.driver.sleep(1000);
-        }
-    }
-
+        }};

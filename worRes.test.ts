@@ -2,8 +2,6 @@ import WorRes from "./worResPOM";
 const WR = new WorRes();
 const fs = require('fs');
 
-//describe
-
 describe("WorshipResources.church Schedule a Call & Resources", () => {
    test("Schedule A Call", async () => {
         await WR.navigate();
@@ -19,27 +17,8 @@ describe("WorshipResources.church Schedule a Call & Resources", () => {
         await WR.scrollDown();
         await WR.scrollDown();
         await WR.click(WR.schCallMainArea3);
-
     });
-
-
-/* 
-  await WR.navigate();
-  await WR.click(WR.tech)
-  await WR.driver.manage().window().maximize();
-*/
-
-/*
-beforeEach(async () => {
-    await WR.navigate();
-    await WR.driver.manage().window().maximize();
-    /*
-afterAll(async () => {
-    await WR.driver.quit()
-})
-*/
  
-
     test("Resources > Media > Church Media Libraries > each 3rd party listed - Free", async () => {
         await WR.navigate();
         await WR.click(WR.wrResourcesTab);
@@ -60,6 +39,7 @@ afterAll(async () => {
     });
 
     test("Resources > Media > Church Media Libraries > each 3rd party listed - Paid", async () => {
+        await WR.scrollDown();
         await WR.click(WR.beamerfilms);
         await WR.driver.sleep(1500);
         await WR.wrshpRsrcsTabs();
@@ -72,6 +52,7 @@ afterAll(async () => {
         await WR.click(WR.churchCountdowns);
         await WR.driver.sleep(1500);
         await WR.wrshpRsrcsTabs();
+        await WR.scrollDown();
         await WR.click(WR.easyWorship);
         await WR.driver.sleep(1500);
         await WR.wrshpRsrcsTabs();
@@ -87,6 +68,7 @@ afterAll(async () => {
         await WR.click(WR.igniterMedia);
         await WR.driver.sleep(1500);
         await WR.wrshpRsrcsTabs();
+        await WR.scrollDown();
         await WR.click(WR.lifeScribeMedia);
         await WR.driver.sleep(1500);
         await WR.wrshpRsrcsTabs();
@@ -171,18 +153,6 @@ afterAll(async () => {
 //3rd party link        await WR.click(WR.);
         await WR.driver.sleep(1500)
         await WR.driver.quit();
-
     });
 
-
-/*
-Use something along these lines for the pricing if I want to automate that.
-let compName: Array<string>;
-url: string;
-constructor(compName: Array<string>, url: string, free: boolean) {
-  this.compName = compName;
-  this.url = url;
-  this.free = free;
-  */
- 
 });
